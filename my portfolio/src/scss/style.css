@@ -1,0 +1,10 @@
+body {
+  margin: 0; }
+
+.header__background {
+  display: flex;
+  background-color: #9accc8;
+  width: 100%;
+  min-height: 500px; }
+
+/*# sourceMappingURL=style.css.map */

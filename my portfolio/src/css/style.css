@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    font-family: MainFont;
+    scroll-behavior: smooth;
+}
+
+.header {
+    margin: 0 auto;
+    position: relative;
+}
+
+/* гамбургер */
+
+.hamburger {
+    position: fixed; top: -16px; left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.hamburger.active {
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+}
+
+.hamburger__menu { 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #eaa691;
+    color: rgb(0, 0, 0);
+    width: 240px;
+    height: 102%;
+    z-index: 9998;
+}
+
+.hamburger__menu_close {
+    position: absolute; top: 40px; right: 30px;
+    cursor: pointer;
+}
+
+.hamburger__menu_list {
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 25vh;
+}
+.hamburger__menu_list_link {
+    text-align: center;
+    margin-bottom: 48px;
+    margin-right: 48px;
+}
+
+.hamburger__menu_list_link::after {
+    content: '';
+    background-color: black;
+    width: 110px;
+    height: 1px;
+    position: absolute; right: 50%;
+    transform: translateX(47%) translateY(25px);
+}
+
+.hamburger__menu_list_link:hover {
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    transition: 200ms;
+}
+
+.hamburger__menu_social {
+    display: flex;
+    margin: 0 auto;
+    position: absolute; bottom: 60px; left: 35%;
+    transition: none;
+}
+
+.hamburger__menu_social_vk {
+    margin-right: 10px;
+}
+
+.hamburger__menu_social_vk_icon:hover, .hamburger__menu_social_telegram_icon:hover {
+    mix-blend-mode: overlay;
+    transition: 100ms;
+}
+
+.hamburger__overlay {
+    position: fixed; top: 0px; left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* секция header */
+
+.header__background {
+    display: flex;
+    position: relative;
+    background: url(../img/bg_header.jpg) center / cover no-repeat;
+    width: 100%;
+    min-height: 300px;
+    margin: auto;
+}   
+.header__menu {
+    display: flex;
+    position: absolute; top: 150px; left: -70px;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+.header__menu_text {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.header__menu_space {
+    margin-right: 8px;
+    display: flex;
+    background-color: black;
+    width: 50px;
+    height: 2px;
+}
+
+.header__menu_vk_icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    width: 24px;
+}
+
+.header__menu_telegram_icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+}
+
+.header__menu_vk_icon:hover, .header__menu_telegram_icon:hover {
+    mix-blend-mode: screen;
+    transition: 200ms;
+}
+
+.header__text {
+    max-width: 700px;
+    margin: 60px 20vw;
+}
+
+.header__text_name {
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.header__text_head {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.header__text_btn {
+    display: flex;
+}
+
+.btn_portfolio {
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: MainFont;
+    cursor: pointer;
+}
+.btn_portfolio:hover {
+    box-shadow: 1px 1px 8px black;
+    transition: 200ms;
+}
+
+.header__text_btn_me {
+    margin-left: 24px;
+}
+
+.btn_me {
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: MainFont;
+    cursor: pointer;
+}
+
+.btn_me:hover {
+    box-shadow: 1px 1px 8px black;
+    transition: 200ms;
+}
+
+.header__btn {
+    cursor: pointer;
+    position: absolute; top: 20px; right: 30px;
+}
+
+.header__btn_me {
+    width: 35px;
+}
+
+/* секция обо мне */
+
+.aboutme {
+    display: flex;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.aboutme_photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px 0 60px 15vw;
+}
+
+.aboutme_photo_img {
+    border: 2px solid black;
+    border-radius: 40%;
+    width: 25vw;
+}
+
+.aboutme__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.aboutme__text {
+    font-size: 25px;
+    margin: 60px 15vw 48px 200px;
+}
+
+.aboutme__text_title {
+    font-size: 14px;
+}
+
+.aboutme__skills {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    margin: 0px 15vw 60px 200px;
+}
+
+.aboutme__skills_web {
+    max-width: 300px;
+    margin-right: 60px;
+}
+
+.aboutme__skills_optimization {
+    max-width: 300px;
+}
+
+@font-face {
+    font-family: MainFont;
+    src: url(../fonts/10832.ttf);
+}
